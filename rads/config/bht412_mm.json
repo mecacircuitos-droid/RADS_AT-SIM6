@@ -1,0 +1,31 @@
+{
+  "pair_separation_in": 1.75,
+  "pitch_link_flat_in": 0.10,
+  "hub_weight_sensitivity_ips_per_100g": 0.11,
+  "product_weight_multiplier": 11.0,
+  "product_weights_per_ips": 4.2,
+  "vertical_tab_ips_per_deg": 0.09,
+
+  "track_pair_tol_in": 0.05,
+  "sep_tol_in": 0.10,
+
+  "ground_ips_limit": 0.10,
+  "hover_ips_limit": 0.12,
+  "kias120_vert_limit": 0.10,
+  "letdown_ips_limit": 0.12,
+
+  "blade_azimuth_deg": {
+    "GRN": 0,
+    "RED": 90,
+    "BLU": 180,
+    "ORG": 270
+  },
+
+  "state_map": {
+    "track60": ["60NR", "IDLE"],
+    "ground100": ["100NR", "FPG"],
+    "hover": ["HOVER"],
+    "kias120": ["120K", "120KIAS"],
+    "letdown": ["LETDOWN", "LDN", "DESCENT"]
+  }
+}

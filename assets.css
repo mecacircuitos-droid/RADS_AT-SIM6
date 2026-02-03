@@ -1,0 +1,119 @@
+<style>
+html, body, [data-testid="stAppViewContainer"] { background: #0b0f14 !important; }
+.block-container { max-width: 1150px !important; margin: 0 auto !important; padding-top: 1.2rem !important; }
+footer { visibility: hidden; }
+#MainMenu { visibility: hidden; }
+
+.rads-panel {
+  background: #0f0f10;
+  border: 2px solid #050506;
+  border-radius: 18px;
+  padding: 18px 18px 22px 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.55);
+}
+
+.rads-title {
+  color: #e7e7e7;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-weight: 800;
+  letter-spacing: .10em;
+  font-size: 12px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* LCD - look & feel closer to the original CADU */
+.lcd {
+  background: #e9eadc;
+  border: 4px solid #111;
+  border-radius: 8px;
+  padding: 10px 12px;
+  height: 292px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 2px #b9bdb2,
+    inset 0 0 18px rgba(0,0,0,.10);
+  position: relative;
+}
+
+/* subtle scanlines */
+.lcd:before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.00),
+    rgba(0,0,0,0.00) 10px,
+    rgba(0,0,0,0.02) 11px
+  );
+  pointer-events: none;
+}
+
+.lcd-text {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #000;
+}
+
+.lcd-line { white-space: pre; }
+
+/* Highlight row + help rows (inverse video) */
+.lcd-line.hl,
+.lcd-line.help {
+  background: #000;
+  color: #fff;
+}
+
+/* Footer (softkey labels shown on LCD, not on the buttons) */
+.lcd-line.footer {
+  white-space: pre;
+  border-top: 2px solid #111;
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+.keyseg {
+  display: inline-block;
+  width: 8ch;
+  text-align: center;
+}
+.keyseg.on {
+  background: #000;
+  color: #fff;
+}
+
+.keysep {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+}
+
+/* Buttons */
+div.stButton>button {
+  border-radius: 12px !important;
+  border: 1px solid #2c2c2c !important;
+  background: #d7d7d7 !important;
+  color: #111 !important;
+  font-weight: 800 !important;
+  height: 44px !important;
+}
+div.stButton>button:hover { background: #f2f2f2 !important; }
+div.stButton>button:active { transform: translateY(1px); }
+div.stButton>button:disabled { opacity: 0.35 !important; }
+
+.keypad div.stButton>button { width: 70px !important; height: 50px !important; border-radius: 10px !important; }
+.fkeys div.stButton>button  { height: 48px !important; border-radius: 12px !important; }
+.skinny div.stButton>button { width: 92px !important; }
+.navpad div.stButton>button { width: 62px !important; height: 46px !important; border-radius: 12px !important; }
+.power div.stButton>button  { width: 92px !important; }
+
+.rads-status {
+  margin-top: 10px;
+  color: #b8b8b8;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 12px;
+}
+</style>
